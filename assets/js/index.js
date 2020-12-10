@@ -2,75 +2,84 @@
 const inquirer = require('inquirer');
 const util = require('util');
 const fs = require('fs');
+const generateMarkdown = require('./generateMarkdown'); 
 
 // array of questions for user
 const questions = [
     {
         type: 'input',
-        name: 'name',
-        message: "What's your name?",
+        name: 'title',
+        message: "Project title?",
     },
     {
         type: 'input',
-        name: 'location',
-        message: 'Where are you located?',
+        name: 'description',
+        message: 'Why did you build this project?',
     },
     {
         type: 'input',
-        name: 'github',
-        message: 'What is your GitHub URL?',
-        default: "I don't have github acct!",
-    }
-
+        name: 'descriptionOne',
+        message: 'What problem does it solve?',
+    },
+    {
+        type: 'input',
+        name: 'descriptionTwo',
+        message: 'What did you learn?',
+    },
+    {
+        type: 'input',
+        name: 'descriptionThree',
+        message: 'What makes your project stand out?',
+    },
+    {
+        type: 'input',
+        name: 'features',
+        message: 'Key features of your project?',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Steps required to install? Provide a step-by-step description.',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Instructions/examples for use?',
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'Collaborators? Provide links to their GitHub profiles.',
+        default: "No collaborators.",
+    },
+    {
+        type: 'input',
+        name: 'creditsOne',
+        message: 'Any third-party assets? List creators with links to their primary web presence.',
+        default: "No third-party assets.",
+    },
+    {
+        type: 'input',
+        name: 'creditsTwo',
+        message: 'Follow tutorials? include links to those here.',
+        default: "No tutorials.",
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'License type?',
+        choices: ['Apache', 'GNU', 'MIT', 'None'],
+        default: "Press Enter if no license.",
+    },
 ];
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
-
-
-
-
-let createIndexTemplate = ({name, location, github}) => {
-    return `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="jumbotron">
-            <h1 class="display-4">${name}</h1>
-            <p class="lead">Location: ${location}</p>
-            <hr class="my-4">
-            <p>GitURL: ${github}</p>
-        </div>
-    </body>
-    </html>`;
-}
-
-
-
-// console.log(template);
-
 
 inquirer
   .prompt(questions)
   .then(answers => {
    
-    const template = createIndexTemplate(answers);
+    const template = generateMarkdown(answers);
 
-    fs.writeFile('index.html', template, (err) => {
+    fs.writeFile('README.md', template, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
       });
@@ -80,3 +89,15 @@ inquirer
     console.log(error);
     }
   );
+
+// function to write README file
+// function writeToFile(fileName, data) {
+// }
+
+// function to initialize program
+// function init() {
+
+// }
+
+// function call to initialize program
+// init();
