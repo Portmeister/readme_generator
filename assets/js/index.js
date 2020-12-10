@@ -73,9 +73,17 @@ const questions = [
     },
 ];
 
-inquirer
-  .prompt(questions)
-  .then(answers => {
+
+// function to write README file
+//function writeToFile(fileName, data) {
+
+//}
+
+// function to initialize program
+function init() {
+    inquirer
+    .prompt(questions)
+    .then(answers => {
    
     const template = generateMarkdown(answers);
 
@@ -83,21 +91,12 @@ inquirer
         if (err) throw err;
         console.log('The file has been saved!');
       });
-
-  })
-  .catch(error => {
-    console.log(error);
+    })
+    .catch(error => {
+        console.log(error);
     }
   );
-
-// function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// function to initialize program
-// function init() {
-
-// }
+}
 
 // function call to initialize program
-// init();
+init();
