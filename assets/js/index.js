@@ -65,6 +65,12 @@ const questions = [
         default: "No tutorials.",
     },
     {
+        type: 'input',
+        name: 'test',
+        message: 'Test Instructions?',
+        default: 'No Special Test Instructions Needed.'
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'License type?',
