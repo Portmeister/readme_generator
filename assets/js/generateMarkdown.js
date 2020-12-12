@@ -10,6 +10,13 @@ ${data.descriptionThree}
   
 # Features
 ${data.features}
+
+# Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
   
 # Installation
 ${data.installation}

@@ -7,6 +7,13 @@ Dynamically Generate a high-quality README.md file for any app from a user's inp
 ## Description
 A command-line application that accepts user input when prompted for information about an application & then generates a high-quality, professional README.md with the title of the project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions. When a license is chosen for the application from the provided list of options, a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under. When a GitHub username is provided, the GitHub user link is added to the Questions section of the README. When an email address is entered, this is also added to the section of the README entitled Questions, with instructions on how to reach the author with additional questions. Clicked links in the Table of Contents will take user to the corresponding section of the README.md.
 
+# Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
 ## Installation
 
 Here are some guidelines to help you get started:
@@ -31,7 +38,7 @@ node index.js
 * A sample README generated using the application is included.
 
 
-# Contributing
+# Credits
 
 * Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
 * Uses code generated: Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
