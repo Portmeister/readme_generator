@@ -31,7 +31,7 @@ node index.js
   - Repository follows best practices for file structure, naming conventions, class/id naming conventions, indentation, quality comments, etc..
   - Repository contains multiple descriptive commit messages.
   - Repo is located at: https://github.com/Portmeister/readme_generator
-* A walkthrough video that demonstrates the functionality of the README generator.
+* A walkthrough video that demonstrates the functionality of the README generator: https://drive.google.com/file/d/1rXSvvavMqbmvhYHIXMfeY1X7aVlds_3R/view
   - The walkthrough video demonstrates how user invokes application from command line.
   - The walkthrough video demonstrates how user enters responses to all prompts in application.
   - The walkthrough video demonstrates generated README that matches user input and has functioning table of contents.
