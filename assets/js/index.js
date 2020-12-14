@@ -77,6 +77,18 @@ const questions = [
         choices: ['Apache', 'GNU', 'MIT', 'None'],
         default: "Press Enter if no license.",
     },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'GitHub Username?',
+        default: 'I do not have a GitHub account',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Email address?',
+        default: 'I do not want to be contacted by email',
+    },
 ];
 
 
